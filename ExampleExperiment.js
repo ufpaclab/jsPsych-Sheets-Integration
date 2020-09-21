@@ -25,22 +25,25 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
         let keyOrder = []
         jsPsychHandle.init({
             timeline: [WelcomeTrial, FinalTrial],
-            on_trial_finish: CreateAdaptiveUpload()
+            on_trial_finish: CreateAdaptiveUpload(sessionID, jsSheetHandle.Insert)
         })
         
         // Define Utility Functions
-        function CreateAdaptiveUpload() {
+        function CreateAdaptiveUpload(id, callback) {
             let keyLookup = {}
             let keyOrder = []
-            return function(data, callback) {
-                for (key in Object.keys(data)) {
+            return function(data) {
+                let keys = Object.keys(data)
+                for (let keyIndex in keys) {
+                    let key = keys[keyIndex]
                     if (typeof keyLookup[key] === 'undefined') {
                         keyLookup[key] = true
                         keyOrder.push(key)
                     }
                 }
                 let paddedData = []
-                for (key in keyOrder) {
+                for (let keyIndex in keyOrder) {
+                    let key = keyOrder[keyIndex]
                     if (typeof data[key] === 'undefined') {
                         paddedData.push('')
                     }
@@ -48,7 +51,7 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
                         paddedData.push(data[key])
                     }
                 }
-                callback(data)
+                callback(id, paddedData)
             }
         }
     }

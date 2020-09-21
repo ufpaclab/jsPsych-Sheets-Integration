@@ -3,7 +3,7 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
 
     function RunExperiment(sessionID) {
         // Define Constants
-        const PI = 3.14
+        const CONTACT_EMAIL = "fake@email.com"
 
         // Define Experiment Trials
         let WelcomeTrial = {
@@ -16,13 +16,11 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
 
         let FinalTrial = {
             type: 'instructions',
-            pages: ['Thanks for particpating! Please email us at fake@email.com.'],
+            pages: [`Thanks for particpating! Please email us at ${CONTACT_EMAIL}.`],
             allow_keys: false
         }
 
         // Configure and Start Experiment
-        let keyLookup = {}
-        let keyOrder = []
         jsPsychHandle.init({
             timeline: [WelcomeTrial, FinalTrial],
             on_trial_finish: CreateAdaptiveUpload(sessionID, jsSheetHandle.Insert)

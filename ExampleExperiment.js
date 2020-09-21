@@ -21,16 +21,35 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
         }
 
         // Configure and Start Experiment
+        let keyLookup = {}
+        let keyOrder = []
         jsPsychHandle.init({
             timeline: [WelcomeTrial, FinalTrial],
-            on_trial_finish: function(data) {
-                jsSheetHandle.Insert(sessionID, Object.values(data))
-            }
+            on_trial_finish: CreateAdaptiveUpload()
         })
-
+        
         // Define Utility Functions
-        function Add(a, b) {
-            return a + b
+        function CreateAdaptiveUpload() {
+            let keyLookup = {}
+            let keyOrder = []
+            return function(data, callback) {
+                for (key in Object.keys(data)) {
+                    if (typeof keyLookup[key] === 'undefined') {
+                        keyLookup[key] = true
+                        keyOrder.push(key)
+                    }
+                }
+                let paddedData = []
+                for (key in keyOrder) {
+                    if (typeof data[key] === 'undefined') {
+                        paddedData.push('')
+                    }
+                    else {
+                        paddedData.push(data[key])
+                    }
+                }
+                callback(data)
+            }
         }
     }
 }

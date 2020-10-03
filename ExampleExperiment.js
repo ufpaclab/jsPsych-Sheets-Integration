@@ -1,7 +1,7 @@
 function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
     jsSheetHandle.CreateSession(RunExperiment)
 
-    function RunExperiment(sessionID) {
+    function RunExperiment(session) {
         // Define Constants
         const CONTACT_EMAIL = "fake@email.com"
 
@@ -23,34 +23,7 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
         // Configure and Start Experiment
         jsPsychHandle.init({
             timeline: [WelcomeTrial, FinalTrial],
-            on_trial_finish: CreateAdaptiveUpload(sessionID, jsSheetHandle.Insert)
+            on_trial_finish: session.insert
         })
-        
-        // Define Utility Functions
-        function CreateAdaptiveUpload(id, callback) {
-            let keyLookup = {}
-            let keyOrder = []
-            return function(data) {
-                let keys = Object.keys(data)
-                for (let keyIndex in keys) {
-                    let key = keys[keyIndex]
-                    if (typeof keyLookup[key] === 'undefined') {
-                        keyLookup[key] = true
-                        keyOrder.push(key)
-                    }
-                }
-                let paddedData = []
-                for (let keyIndex in keyOrder) {
-                    let key = keyOrder[keyIndex]
-                    if (typeof data[key] === 'undefined') {
-                        paddedData.push('')
-                    }
-                    else {
-                        paddedData.push(data[key])
-                    }
-                }
-                callback(id, paddedData)
-            }
-        }
     }
 }

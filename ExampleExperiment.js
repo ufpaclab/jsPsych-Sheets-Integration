@@ -16,8 +16,7 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle, SONAHandle) {
 
         let FinalTrial = {
             type: 'instructions',
-            pages: [`Thanks for particpating! Please email us at ${CONTACT_EMAIL}.`],
-            allow_keys: false
+            pages: [`Thanks for particpating! Please email us at ${CONTACT_EMAIL}.`]
         }
 
         // Configure and Start Experiment

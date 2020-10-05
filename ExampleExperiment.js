@@ -1,4 +1,4 @@
-function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
+function ExampleExperiment(jsSheetHandle, jsPsychHandle, SONAHandle) {
     jsSheetHandle.CreateSession(RunExperiment)
 
     function RunExperiment(session) {
@@ -23,7 +23,8 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle) {
         // Configure and Start Experiment
         jsPsychHandle.init({
             timeline: [WelcomeTrial, FinalTrial],
-            on_trial_finish: session.insert
+            on_trial_finish: session.insert,
+            on_finish: SONAHandle.redirectToSONA
         })
     }
 }

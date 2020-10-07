@@ -24,7 +24,7 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle, survey_code) {
         jsPsychHandle.init({
             timeline: [WelcomeTrial, FinalTrial],
             on_trial_finish: session.insert,
-            on_finish: window.top.location.href = SONA_URL
+            on_finish: function() { window.top.location.href = SONA_URL }
         })
     }
 }

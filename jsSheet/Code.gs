@@ -1,5 +1,7 @@
-function doGet() {
-  return HtmlService.createHtmlOutputFromFile('index')
+function doGet(e) {
+  var template = HtmlService.createTemplateFromFile('index')
+  template.survey_code = e.parameter.survey_code
+  return template.evaluate()
 }
 
 function Insert(id, data) {

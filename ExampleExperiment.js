@@ -23,7 +23,7 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle, survey_code) {
         // Configure and Start Experiment
         jsPsychHandle.init({
             timeline: [WelcomeTrial, FinalTrial],
-            on_trial_finish: session.insert,
+            on_trial_finish: function() { console.log(session); return session.insert },
             on_finish: function() { window.top.location.href = SONA_URL }
         })
     }

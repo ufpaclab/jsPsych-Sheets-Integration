@@ -12,7 +12,7 @@ const jsSheet = {
               keyLookup.set(key, true)
           }
 
-          let paddedData = []
+          let paddedData = [id]
           for (const key of keyLookup.keys()) {
               paddedData.push(data.hasOwnProperty(key) ? data[key] : '')
           }

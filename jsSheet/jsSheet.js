@@ -3,6 +3,7 @@ const jsSheet = {
     google.script.run.withFailureHandler(onFailure).withSuccessHandler(CreateLocalSession).GetSessionID()
 
     function CreateLocalSession(id) {
+      console.log("I ran")
       let keyLookup = new Map()
       onSuccess({
         id: id,

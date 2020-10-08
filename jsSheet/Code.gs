@@ -6,7 +6,7 @@ function doGet(e) {
 
 function Insert(id, data) {
   var ss = SpreadsheetApp.getActiveSpreadsheet()
-  var sheetName = id.toString()
+  var sheetName = 'Results'
   var sheet = ss.getSheetByName(sheetName)
   if (sheet == null) {
     sheet = ss.insertSheet(sheetName)

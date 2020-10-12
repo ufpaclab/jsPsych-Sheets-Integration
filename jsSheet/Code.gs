@@ -4,7 +4,42 @@ function doGet(e) {
   return template.evaluate()
 }
 
-function Insert(id, data) {
+function GetSessionID() {
+  var lock = LockService.getScriptLock()
+  lock.waitLock(30000)
+  
+  var scriptProperties = PropertiesService.getScriptProperties()
+  var currentID = ReadOrCreateProperty_(scriptProperties, 'sessionId', '0')
+  var newID = parseInt(currentID) + 1
+  scriptProperties.setProperty('sessionId', newID.toString())
+  
+  lock.releaseLock()
+  
+  return newID
+}
+
+function Insert(id, data) {  
+  var scriptProperties = PropertiesService.getScriptProperties()
+  
+  var lock = LockService.getScriptLock()
+  lock.waitLock(30000)
+  
+  var keyCount = ReadOrCreateProperty_(scriptProperties, 'keyCount', '1')
+  keyCount = parseInt(keyCount)
+  
+  var paddedData = [id]
+  var keys = Object.keys(data)
+  for (var key of keys) {
+    var keyIndex = ReadOrCreateProperty_(scriptProperties, key, keyCount)
+    if (keyIndex == keyCount)
+      keyCount++
+
+    paddedData[keyIndex] = data[key]
+  }
+  scriptProperties.setProperty("keyCount", keyCount.toString())
+  
+  lock.releaseLock()
+  
   var ss = SpreadsheetApp.getActiveSpreadsheet()
   var sheetName = 'Results'
   var sheet = ss.getSheetByName(sheetName)
@@ -13,18 +48,12 @@ function Insert(id, data) {
   }
   sheet.appendRow(data)
 }
-
-function GetSessionID() {
-  var lock = LockService.getScriptLock()
-  lock.waitLock(30000)
-  var documentProperties = PropertiesService.getDocumentProperties()
-  var currentID = documentProperties.getProperty('sessionID')
-  if (currentID == "NaN") {
-    documentProperties.setProperty('sessionID', '0')
-    currentID = '0'
+  
+function ReadOrCreateProperty_(properties, key, defaultValue) {
+  var value = properties.getProperty(key)
+  if (value == null) {
+    value = defaultValue.toString()
+    properties.setProperty(key, value)
   }
-  var newID = parseInt(currentID) + 1
-  documentProperties.setProperty('sessionID', newID.toString())
-  lock.releaseLock()
-  return newID
+  return value
 }

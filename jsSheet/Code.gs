@@ -46,7 +46,7 @@ function Insert(id, data) {
   if (sheet == null) {
     sheet = ss.insertSheet(sheetName)
   }
-  sheet.appendRow(data)
+  sheet.appendRow(paddedData)
 }
   
 function ReadOrCreateProperty_(properties, key, defaultValue) {

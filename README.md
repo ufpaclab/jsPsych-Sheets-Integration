@@ -1,6 +1,8 @@
 # Welcome
 This repository contains is a template for online experiments that integrates jsPysch, Google Sheets, and SONA. The goal is to make it a breeze to upload your experiments to the internet, gather data, and give out credits. Have at it!
 
+Pictures to improve the tutorial coming soon!
+
 # Files
 
 ## jspych

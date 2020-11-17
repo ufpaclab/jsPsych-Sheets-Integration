@@ -17,7 +17,7 @@ function ExampleExperiment(jsSheetHandle, jsPsychHandle, survey_code) {
 
         let FinalTrial = {
             type: 'instructions',
-            pages: [`Thanks for particpating! Please email us at ${CONTACT_EMAIL}. Push the right arrow key to recieve credit.`]
+            pages: [`Thanks for participating! Please email us at ${CONTACT_EMAIL}. Push the right arrow key to recieve credit.`]
         }
 
         // Configure and Start Experiment

@@ -134,3 +134,8 @@ Now, we have two files listed in our App: **Code.gs** and **index.html**. We nee
 Assuming everything has been done correctly, you should be able to access your experiment using the link provided after deploying your experiment. You can now start modifying the index.html and ExampleExperiment.js with your jsPsych experiment code.
 
 ![](resources/complete.JPG)
+
+### In-Progress:
+ 1. Name Revisions
+ 2. Credit Granting Discussion
+ 3. Local Debug Discussion

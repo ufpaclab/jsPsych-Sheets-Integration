@@ -38,9 +38,16 @@ Deploying this code is relatively easy, but there are still a few steps you have
 This repository is known as a *template*. This means you can make an entirely new repository and start with the files and organization you see here. You should start by making your own repository based off this template.
 
  1. Click "Use this template".
- 2. Choose the owner, name, and visibility of the template.
- 3. Create the repository.
+ 
 ![](resources/createrepo.jpg)
+ 
+ 2. Choose the owner, name, and visibility of the template.
+ 
+ ![](resources/owner.jpg)
+ 
+ 3. Create the repository.
+ 
+ ![](resources/usetemplate.jpg)
 
 ## GitHub Pages
 We use Github to host our files. This let's our Google Apps Scripts see and use our files. We need to enable this functionality before we can proceed any further.

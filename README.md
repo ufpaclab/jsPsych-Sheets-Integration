@@ -32,7 +32,7 @@ All files and folders used in your experiment that don't fit into another catego
 The **README.md** file is this document. I am a special file that will be the first thing that anyone going to your repository reads. Be sure to update me when you make a copy!
 
 # Deployment Tutorial
-Deploying this code is relatively easy, but there are still a few steps you have to follow to get things going.
+This template is inteded to make deployment relatively easy. Follow the following steps to create your own depoyed copy of the template.
 
 ## Repository
 This repository is known as a *template*. This means you can make an entirely new repository and start with the files and organization you see here. You should start by making your own repository based off this template.

@@ -1,13 +1,11 @@
 # Welcome
-This repository contains is a template for online experiments that integrates jsPysch, Google Sheets, and SONA. The goal is to make it a breeze to upload your experiments to the internet, gather data, and give out credits. Have at it!
-
-Pictures to improve the tutorial coming soon!
+This repository contains a template for online experiments that integrates jsPsych, Google Sheets, and SONA. The goal is to make it a breeze to upload your experiments to the internet, gather data, and distribute credits for participation. Have at it!
 
 # Files
 
-## jspych
+## jsPsych
 
-This folder contains the most recent version of jsPsych for use in your experiments. There is no need to touch this unless you need to add some custom plugins or need to update to a different version.
+This folder contains the most recent version (as of November 2020) of jsPsych for use in your experiments. There is no need to touch this unless you need to add some custom plugins or need to update to a different version.
 
 ## jsSheet
 
@@ -18,21 +16,21 @@ This folder contains the files necessary to get your experiment deployed with Go
 
 ## resources
 
-This folder is meant to contain all multimedia files (or any "bulk" file) that is required for the experiment. It's use is purely organizational, but it can help to remove a lot of clutter files from your code.
+This folder is meant to contain all multimedia files (or any "bulk" file) that are required for the experiment. Its use is purely organizational, but it can help to remove a lot of clutter & files from your code.
 
 ## Experiment Files
 
 All files and folders used in your experiment that don't fit into another category should be held in the root directory. It currently holds **ExampleExperiment.js** and **format.css**, but you may need to expand the number here based on the needs of your work.
 
-- **ExampleExperiment.js** - The meat of your experiment. This file should hold the bulk of the code for your experiment. The default content here is near the minimum code needed to run an experiment, save it's data, and then redirect to SONA to grant credit. Add trials to it until you have the experiment that you want!
-- **format.css** - css file that can be used to modify the appearance of the experiment. It's purpose is entirely aesthetic, but it may be necessary to your experiment if you need specific visual features.
+- **ExampleExperiment.js** - The meat of your experiment. This file should hold the bulk of the code for your experiment. The default content here is near the minimum amount of code needed to run an experiment, save data, and then redirect to SONA to grant credit. Add trials to it until you have the experiment that you want!
+- **format.css** - css file that can be used to modify the appearance of the experiment. Its purpose is entirely aesthetic, but it may be necessary to your experiment if you need specific visual features.
 
 ## READEME.md
 
 The **README.md** file is this document. I am a special file that will be the first thing that anyone going to your repository reads. Be sure to update me when you make a copy!
 
 # Deployment Tutorial
-This template is inteded to make deployment relatively easy. Follow the following steps to create your own depoyed copy of the template.
+This template is inteded to make deployment relatively easy. Follow the following steps to create your own deployed copy of the template.
 
 ## Repository
 This repository is known as a *template*. This means you can make an entirely new repository and start with the files and organization you see here. You should start by making your own repository based off this template.

@@ -27,9 +27,9 @@ All files and folders used in your experiment that don't fit into another catego
 - **ExampleExperiment.js** - The meat of your experiment. This file should hold the bulk of the code for your experiment. The default content here is near the minimum code needed to run an experiment, save it's data, and then redirect to SONA to grant credit. Add trials to it until you have the experiment that you want!
 - **format.css** - css file that can be used to modify the appearance of the experiment. It's purpose is entirely aesthetic, but it may be necessary to your experiment if you need specific visual features.
 
-## ME!
+## READEME.md
 
-The **README.md** file is me! I am a special file that will be the first thing that anyone going to your repository reads. Be sure to update me when you make a copy!
+The **README.md** file is this document. I am a special file that will be the first thing that anyone going to your repository reads. Be sure to update me when you make a copy!
 
 # Deployment Tutorial
 Deploying this code is relatively easy, but there are still a few steps you have to follow to get things going.

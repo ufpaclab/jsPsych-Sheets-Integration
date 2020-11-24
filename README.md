@@ -48,7 +48,7 @@ This repository is known as a *template*. This means you can make an entirely ne
  ![](resources/createrepo.JPG)
 
 ## GitHub Pages
-We use Github to host our files. This let's our Google Apps Scripts see and use our files. We need to enable this functionality before we can proceed any further.
+We use Github to host our experiment files. This allows Google Apps Scripts to see and use our experiment files. We need to enable this functionality before we can proceed any further.
 
 **1. Navigate to your new repository.**
 

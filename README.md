@@ -72,9 +72,19 @@ We use Github to host our files. This let's our Google Apps Scripts see and use 
 
 ## Update Code
 Every repository has it's own url and yours is no different! We need to update this in your code so that the Google Scripts App knows where to look for your files.
-1. Navigate to jsSheet/index.html.
-2. Fill in "https://\<USER\>.github.io/\<REPO\>/" where \<USER\> is your GitHub username and \<REPO\> is the name of your repository. This also be found near the top of the Github Pages section of your settings.
-3. Save your changes and push them to your repository.
+**1. Navigate to jsSheet/index.html.**
+
+![](resources/jssheet.JPG)
+
+![](resources/index.JPG)
+
+**2. Fill in "https://\<USER\>.github.io/\<REPO\>/" where \<USER\> is your GitHub username and \<REPO\> is the name of your repository. This also be found near the top of the Github Pages section of your settings.**
+
+![](resources/fillin.JPG)
+
+**3. Save your changes and push them to your repository.**
+
+![](resources/savechanges.JPG)
 
 ## Deploy to Google Apps
 In order to deploy our code to the internet and connect it to our database (Google Sheets), we need to put some of it into a Google App.

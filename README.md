@@ -37,25 +37,26 @@ Deploying this code is relatively easy, but there are still a few steps you have
 ## Repository
 This repository is known as a *template*. This means you can make an entirely new repository and start with the files and organization you see here. You should start by making your own repository based off this template.
 
- 1. Click "Use this template".
+ **1. Click "Use this template".**
  
 ![](resources/usetemplate.jpg)
  
- 2. Choose the owner, name, and visibility of the template.
+ **2. Choose the owner, name, and visibility of the template.**
  
  ![](resources/owner.jpg)
  
- 3. Create the repository.
+ **3. Create the repository.**
  
  ![](resources/createrepo.jpg)
 
 ## GitHub Pages
 We use Github to host our files. This let's our Google Apps Scripts see and use our files. We need to enable this functionality before we can proceed any further.
 
-1. Click "Settings".
-2. Scroll down until you see **GitHub Pages**.
-3. Select a Source (usually *master*).
-4. Save.
+1. Navigate to your new repository.
+2. Click "Settings".
+3. Scroll down until you see **GitHub Pages**.
+4. Select a Source (usually *master*).
+5. Save.
 
 ## Update Code
 Every repository has it's own url and yours is no different! We need to update this in your code so that the Google Scripts App knows where to look for your files.

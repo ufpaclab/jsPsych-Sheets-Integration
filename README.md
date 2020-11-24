@@ -1,7 +1,7 @@
 # Welcome
 This repository contains a template for online experiments that integrates jsPsych, Google Sheets, and SONA. The goal is to make it a breeze to upload your experiments to the internet, gather data, and distribute credits for participation. Have at it!
 
-# Files
+# Folders and Files
 
 ## jsPsych
 
@@ -35,7 +35,7 @@ This template is inteded to make deployment relatively easy. Follow the followin
 ## Repository
 This repository is known as a *template*. This means you can make an entirely new repository and start with the files and organization you see here. You should start by making your own repository based off this template.
 
- **1. Click "Use this template".**
+ **1. Click "Use this template", which is a green button found at the top of your screen.**
  
 ![](resources/usetemplate.JPG)
  

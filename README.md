@@ -78,7 +78,7 @@ Every repository has it's own url and yours is no different! We need to update t
 
 ![](resources/index.JPG)
 
-**2. Fill in "https://\<USER\>.github.io/\<REPO\>/" where \<USER\> is your GitHub username and \<REPO\> is the name of your repository. This also be found near the top of the Github Pages section of your settings.**
+**2. Fill in "https://\<USER\>.github.io/\<REPO\>/" where \<USER\> is your GitHub username and \<REPO\> is the name of your repository. This can also be found near the top of the Github Pages section of your settings.**
 
 ![](resources/fillin.JPG)
 

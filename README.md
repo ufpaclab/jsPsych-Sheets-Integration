@@ -39,7 +39,7 @@ This repository is known as a *template*. This means you can make an entirely ne
 
  1. Click "Use this template".
  
-![](resources/createrepo.jpg)
+![](resources/usetemplate.jpg)
  
  2. Choose the owner, name, and visibility of the template.
  
@@ -47,7 +47,7 @@ This repository is known as a *template*. This means you can make an entirely ne
  
  3. Create the repository.
  
- ![](resources/usetemplate.jpg)
+ ![](resources/createrepo.jpg)
 
 ## GitHub Pages
 We use Github to host our files. This let's our Google Apps Scripts see and use our files. We need to enable this functionality before we can proceed any further.

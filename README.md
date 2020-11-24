@@ -88,17 +88,49 @@ Every repository has it's own url and yours is no different! We need to update t
 
 ## Deploy to Google Apps
 In order to deploy our code to the internet and connect it to our database (Google Sheets), we need to put some of it into a Google App.
-1. Go to your Google Drive
-2. Create a new Google Sheet
-3. Go to Tools > Script Editor
-4. Create a new HTML file by doing File > New > HTML File
-5. Name it index
+
+**1. Go to your Google Drive**
+
+**2. Create a new Google Sheet**
+
+**3. Go to Tools > Script Editor**
+
+![](resources/tools.JPG)
+
+![](resources/scripteditor.JPG)
+
+**4. Create a new HTML file by using File > New > HTML File**
+
+![](resources/createhtml.JPG)
+
+**5. Name it "index"**
+
+![](resources/saveindex.JPG)
+
 Now, we have two files listed in our App: **Code.gs** and **index.html**. We need to copy the contents of your **Code.gs** and **index.html** into their online versions.
-6. Copy and Save from **jsSheet/index.html** to **index.html** in your Google App.
-7. Copy and Save from **jsSheet/Code.gs** to **Code.gs** in your Google App.
-8. Click Publish > Deploy as Web App
-9. Change the "Who has access to the app:" section to "Anyone, even anonymous"
-10. Click Deploy  
 
-Assuming everything has been done correctly, you should be able to access your experiment using the link provided after deploying your experiment.
+![](resources/codeindexlocation.JPG)
 
+**6. Copy and Save from *jsSheet/index.html* to *index.html* in your Google App.**
+
+![](resources/indexsave.JPG)
+
+**7. Copy and Save from *jsSheet/Code.gs* to *Code.gs* in your Google App.**
+
+![](resources/codesave.JPG)
+
+**8. Click Publish > Deploy as Web App**
+
+![](resources/deployasapp.JPG)
+
+**9. Change the "Who has access to the app:" section to "Anyone, even anonymous"**
+
+![](resources/anonymous.JPG)
+
+**10. Click Deploy**
+
+![](resources/deploy.JPG)
+
+Assuming everything has been done correctly, you should be able to access your experiment using the link provided after deploying your experiment. You can now start modifying the index.html and ExampleExperiment.js with your jsPsych experiment code.
+
+![](resources/complete.JPG)

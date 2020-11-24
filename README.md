@@ -58,7 +58,7 @@ We use Github to host our files. This let's our Google Apps Scripts see and use 
 
 ![](resources/settings.JPG)
 
-**3. Scroll down until you see **GitHub Pages**.**
+**3. Scroll down until you see *GitHub Pages*.**
 
 ![](resources/pages.JPG)
 

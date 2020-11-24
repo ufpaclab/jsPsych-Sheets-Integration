@@ -39,24 +39,35 @@ This repository is known as a *template*. This means you can make an entirely ne
 
  **1. Click "Use this template".**
  
-![](resources/usetemplate.jpg)
+![](resources/usetemplate.JPG)
  
  **2. Choose the owner, name, and visibility of the template.**
  
- ![](resources/owner.jpg)
+ ![](resources/owner.JPG)
  
  **3. Create the repository.**
  
- ![](resources/createrepo.jpg)
+ ![](resources/createrepo.JPG)
 
 ## GitHub Pages
 We use Github to host our files. This let's our Google Apps Scripts see and use our files. We need to enable this functionality before we can proceed any further.
 
 1. Navigate to your new repository.
 2. Click "Settings".
+
+![](resources/settings.JPG)
+
 3. Scroll down until you see **GitHub Pages**.
+
+![](resources/pages.JPG)
+
 4. Select a Source (usually *master*).
+
+![](resources/pagemaster.JPG)
+
 5. Save.
+
+![](resources/pagesave.JPG)
 
 ## Update Code
 Every repository has it's own url and yours is no different! We need to update this in your code so that the Google Scripts App knows where to look for your files.

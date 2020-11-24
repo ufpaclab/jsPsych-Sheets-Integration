@@ -53,11 +53,12 @@ This repository is known as a *template*. This means you can make an entirely ne
 We use Github to host our files. This let's our Google Apps Scripts see and use our files. We need to enable this functionality before we can proceed any further.
 
 **1. Navigate to your new repository.**
+
 **2. Click "Settings".**
 
 ![](resources/settings.JPG)
 
-**3. Scroll down until you see **GitHub Pages**.
+**3. Scroll down until you see **GitHub Pages**.**
 
 ![](resources/pages.JPG)
 

@@ -131,7 +131,7 @@ Now, we have two files listed in our App: **Code.gs** and **index.html**. We nee
 
 ![](resources/deploy.JPG)
 
-Assuming everything has been done correctly, you should be able to access your experiment using the link provided after deploying your experiment. You can now start modifying the index.html and ExampleExperiment.js with your jsPsych experiment code.
+Assuming everything has been done correctly, you should be able to access your experiment using the link provided after deploying your experiment. You can now start modifying the index.html and ExampleExperiment.js with your jsPsych experiment code. Don't forget to re-upload your index.html to the google app when you make change!
 
 ![](resources/complete.JPG)
 

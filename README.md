@@ -20,9 +20,9 @@ This folder is meant to contain all multimedia files (or any "bulk" file) that a
 
 ## Experiment Files
 
-All files and folders used in your experiment that don't fit into another category should be held in the root directory. It currently holds **ExampleExperiment.js** and **format.css**, but you may need to expand the number here based on the needs of your work.
+All files and folders used in your experiment that don't fit into another category should be held in the root directory. It currently holds **Experiment.js** and **format.css**, but you may need to expand the number here based on the needs of your work.
 
-- **ExampleExperiment.js** - The meat of your experiment. This file should hold the bulk of the code for your experiment. The default content here is near the minimum amount of code needed to run an experiment, save data, and then redirect to SONA to grant credit. Add trials to it until you have the experiment that you want!
+- **Experiment.js** - The meat of your experiment. This file should hold the bulk of the code for your experiment. The default content here is near the minimum amount of code needed to run an experiment, save data, and then redirect to SONA to grant credit. Add trials to it until you have the experiment that you want!
 - **format.css** - css file that can be used to modify the appearance of the experiment. Its purpose is entirely aesthetic, but it may be necessary to your experiment if you need specific visual features.
 
 ## READEME.md
@@ -129,11 +129,10 @@ Now, we have two files listed in our App: **Code.gs** and **index.html**. We nee
 
 ![](resources/deploy.JPG)
 
-Assuming everything has been done correctly, you should be able to access your experiment using the link provided after deploying your experiment. You can now start modifying the index.html and ExampleExperiment.js with your jsPsych experiment code. Don't forget to re-upload your index.html to the google app when you make change!
+Assuming everything has been done correctly, you should be able to access your experiment using the link provided after deploying your experiment. You can now start modifying the index.html and Experiment.js with your jsPsych experiment code. Don't forget to re-upload your index.html to the google app when you make change!
 
 ![](resources/complete.JPG)
 
 ### In-Progress:
- 1. Name Revisions
  2. Credit Granting Discussion
  3. Local Debug Discussion

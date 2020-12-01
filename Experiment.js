@@ -1,10 +1,10 @@
-function Experiment(jsSheetHandle, jsPsychHandle, survey_code) {
+function Experiment(jsSheetHandle, jsPsychHandle, codes) {
     jsSheetHandle.CreateSession(RunExperiment)
 
     function RunExperiment(session) {
         // Define Constants
         const CONTACT_EMAIL = 'fake@email.com'
-        const CREDIT_URL = `<CREDIT_URL>&survey_code=${survey_code}`
+        const CREDIT_URL = `<CREDIT_URL>&survey_code=${codes.survey_code}`
 
         // Define Experiment Trials
         let welcomeTrial = {

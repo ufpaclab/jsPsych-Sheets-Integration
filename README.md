@@ -194,4 +194,4 @@ const CREDIT_URL = `https://credit-provider-site/abcdef12345/12345?builtInCode=a
 
 Note that we use string interpolation above. We can place a variable anywhere inside of the `` using \${variable}. We can also access a code using \${codes.survey_code} and place it in the CREDIT_URL.
 
-On an experiment finish, your user should new be redirected and granted credit.
+On an experiment finish, your user should be redirected and granted credit.

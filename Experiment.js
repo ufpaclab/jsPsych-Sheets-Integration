@@ -4,7 +4,7 @@ function Experiment(jsSheetHandle, jsPsychHandle, survey_code) {
     function RunExperiment(session) {
         // Define Constants
         const CONTACT_EMAIL = 'fake@email.com'
-        const SONA_URL = `<SONA_URL>&survey_code=${survey_code}`
+        const CREDIT_URL = `<CREDIT_URL>&survey_code=${survey_code}`
 
         // Define Experiment Trials
         let welcomeTrial = {
@@ -24,7 +24,7 @@ function Experiment(jsSheetHandle, jsPsychHandle, survey_code) {
         jsPsychHandle.init({
             timeline: [welcomeTrial, finalTrial],
             on_trial_finish: session.insert,
-            on_finish: function() { window.top.location.href = SONA_URL }
+            on_finish: function() { window.top.location.href = CREDIT_URL }
         })
     }
 }

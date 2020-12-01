@@ -1,6 +1,5 @@
 # Welcome
-This repository contains a template for online experiments that integrates jsPsych, Google Sheets, and SONA. The goal is to make it a breeze to upload your experiments to the internet, gather data, and distribute credits for participation. Have at it!
-
+This repository contains a template for online experiments that integrates jsPsych, Google Sheets, and SONA. The goal is to make it easier to upload your experiments to the internet, gather data, and distribute credits for participation. Note this template is a work in progress. Pull requests and suggestions are welcome!
 # Folders and Files
 
 ## jsPsych
@@ -133,6 +132,66 @@ Assuming everything has been done correctly, you should be able to access your e
 
 ![](resources/complete.JPG)
 
-### In-Progress:
- 2. Credit Granting Discussion
- 3. Local Debug Discussion
+# Credit Granting 
+**Important: This tutorial may not work for all credit granters. So far, it has been tested with SONA Systems.**
+
+One of the most valuable qualities of an online study is the ability to run the experiment, get data, and grant credit without any researcher intervention. The most common way to grant credit is to redirect the user to a URL which will automatically give them credit.
+
+Credit granting usually comes in the form of 2 URLs. One URL redirects the user to the online experiment and the other redirects the user back to the credit granting site. Both of the URLs have attached to them a code which can be used to identify the user*. The code often looks like this:
+
+* ?survey_code=123456
+
+However, every credit granter has a different system. This means the format of the URL and the type and name of codes can vary greatly. More research needs to be done in order to make this tutorial work with all credit granters.
+
+*note: This value should not be stored permanently. The credit granters system may allow for the user to be identified personally.
+
+## Files
+
+The relevant files to the credit granting system are:
+
+* Code.gs - Grabs the credit code from the URL and passes it into index.html
+* index.html - Passes the credit code into the experiment
+* Experiment.js - Adds the credit code to the redirect URL and redirects the user on completion.
+
+## How To
+
+The first step is to identify which codes (url parameters) you will need to create your redirect url. We will collect them in Code.gs like so:
+
+![](resources/capture.JPG)
+
+"survey_code" should be replaced with the name of your code. If you have multiple codes, then you can repeat the highlighted snippet as many times as needed with the names of your codes.
+
+Next, we need to set the insertion location in index.html
+
+![](resources/insertion.JPG)
+
+The final parameter of the Experiment function is a Javascript Object. If you only have one code, then simple change "survey_code" to the name of your code. If you have multiple codes, you will need to modify the above snippet like so:
+```js
+<script>
+    Experiment(jsSheet, jsPsych, {
+        code1: <?= code1 ?>,
+        code2: <?= code2 ?>,
+        code3: <?= code3 ?>
+    })
+</script>
+```
+
+These codes will now be available in your Experiment.js file. They are stored in the "data" object and can be accessed like so:
+
+```js
+    let oneOfTheCodes = codes.survey_code;
+```
+
+Now, we will need to edit your CREDIT_URL. Your credit provider should give you information on how to set up a credit redirect url. Generally it will be in this format:
+
+https://credit-provider-site/abcdef12345/12345?builtInCode=abcdef12345&survey_code=XXXXX
+
+Where XXXXX is the code. Define your own CREDIT_URL using your credit redirect url like so:
+
+```
+const CREDIT_URL = `https://credit-provider-site/abcdef12345/12345?builtInCode=abcdef12345&survey_code=${codes.survey_code}`
+```
+
+Note that we use string interpolation above. We can place a variable anywhere inside of the `` using \${variable}. We can also access a code using \${codes.survey_code} and place it in the CREDIT_URL.
+
+On an experiment finish, your user should new be redirected and granted credit.

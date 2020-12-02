@@ -137,9 +137,11 @@ Assuming everything has been done correctly, you should be able to access your e
 
 One of the most valuable qualities of an online study is the ability to run the experiment, get data, and grant credit without any researcher intervention. The most common way to grant credit is to redirect the user to a URL which will automatically give them credit.
 
-Credit granting usually comes in the form of 2 URLs. One URL redirects the user to the online experiment and the other redirects the user back to the credit granting site. Both of the URLs have attached to them a code which can be used to identify the user*. The code often looks like this:
+Credit granting usually comes in the form of 2 URLs. One URL redirects the user to the online experiment and the other redirects the user back to the credit granting site. Both of the URLs have attached to them a code which can be used to identify the user*. For example, SONA Sytems urls looks like this:
 
-* ?survey_code=123456
+* **To Experiment**: https:/<span>/script.google.com/macros/s/AKfycbxvcjOCRw3q-Zwpx3AII4hv19GVKMy1EZt_fuljrK8Mhpm4LHg/exec**?survey_code=12345**
+* **Grant Credit**: https:/<span>/ufl.sona-systems.com/webstudy_credit.aspx?experiment_id=123&credit_token=abcdef123456789**?survey_code=12345**
+
 
 However, every credit granter has a different system. This means the format of the URL and the type and name of codes can vary greatly. More research needs to be done in order to make this tutorial work with all credit granters.
 
